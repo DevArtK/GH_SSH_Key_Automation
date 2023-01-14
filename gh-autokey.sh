@@ -4,8 +4,8 @@ set -e
 # Generate SSH Key and Deploy to Github
 
 # Access token must have admin:public_key for DELETE
-# TOKEN=$1  # For cli provided access token
-TOKEN=$(<.env) # Read from file access token
+TOKEN=$1  # For cli provided access token
+# TOKEN=$(<.env) # Read from file access token
 
 echo "Genrating ed25519 ssh key"
 ssh-keygen -q -b 4096 -t ed25519 -N "" -f ~/.ssh/id_ed25519
